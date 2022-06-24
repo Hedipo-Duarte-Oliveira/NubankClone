@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/container_circulo.xml" value="0.1345" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/container_circulo_icones.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/ic_cobrar.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/ic_pix.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/ic_question.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/ic_recarga_celular.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/drawable/ic_usuario.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/hduartol/AndroidStudioProjects/NubankClone/app/src/main/res/layout/pagamento_item.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
