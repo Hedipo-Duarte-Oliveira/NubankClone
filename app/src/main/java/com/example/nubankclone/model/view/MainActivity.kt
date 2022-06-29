@@ -1,17 +1,22 @@
-package com.example.nubankclone
+package com.example.nubankclone.model.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.nubankclone.R
 import com.example.nubankclone.adapter.AdapterPagamento
+import com.example.nubankclone.adapter.AdapterProduto
 import com.example.nubankclone.databinding.ActivityMainBinding
 import com.example.nubankclone.model.Pagamentos
+import com.example.nubankclone.model.Produto
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapterPagamento: AdapterPagamento
+    private lateinit var adapterProduto: AdapterProduto
     private val listaPagamento: MutableList<Pagamentos> = mutableListOf()
+    private val listaProduto: MutableList<Produto> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,15 +26,28 @@ class MainActivity : AppCompatActivity() {
         listaIconesPagamentos()
         supportActionBar!!.hide()
         setupRecyclerview()
+        setupRecyclerProduto()
+    }
+
+    private fun setupRecyclerProduto() {
+        val recyclerProduto = binding.recyclerProdutos
+        recyclerProduto.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerProduto.setHasFixedSize(true)
+        adapterProduto = AdapterProduto(this, listaProduto)
+        recyclerProduto.adapter = adapterProduto
     }
 
     private fun setupRecyclerview() {
         val recyclerIconesPagamentos = binding.recyclerIconesPagamentos
-        recyclerIconesPagamentos.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerIconesPagamentos.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerIconesPagamentos.setHasFixedSize(true)
         adapterPagamento = AdapterPagamento(this, listaPagamento)
         recyclerIconesPagamentos.adapter = adapterPagamento
+        listaTextoInformativo()
     }
+
     private fun listaIconesPagamentos() {
         val icone1 = Pagamentos(R.drawable.ic_pix, "Aréa Pix")
         listaPagamento.add(icone1)
@@ -47,5 +65,20 @@ class MainActivity : AppCompatActivity() {
         listaPagamento.add(icone7)
         val icone8 = Pagamentos(R.drawable.doacao, "Doação")
         listaPagamento.add(icone8)
+    }
+
+    private fun listaTextoInformativo() {
+        val textiInformativo = Produto("Participe da Promoção Tudo no Roxinho e concorra a ......")
+        listaProduto.add(textiInformativo)
+
+        val textiInformativo2 = Produto("Chegou o débito automático da fatura do cartão")
+        listaProduto.add(textiInformativo2)
+
+        val textiInformativo3 =
+            Produto("Conheça a conta PJ: prática e livre de burocracia para se....")
+        listaProduto.add(textiInformativo3)
+
+        val textiInformativo4 = Produto("Salve seus amigos da burocracia: Faça um convite....")
+        listaProduto.add(textiInformativo4)
     }
 }
